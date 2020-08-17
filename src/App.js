@@ -1,25 +1,24 @@
- import React, {Component} from 'react';
-import Todos from './component/Todos';
-import AddTodo from './component/AddTodo';
-import Header from './component/layout/Header';
-import uuid from 'uuid'; 
-import './App.css';
+import React, { Component } from "react";
+import Todos from "./component/Todos";
+import AddTodo from "./component/AddTodo";
+import Header from "./component/layout/Header";
+import "./App.css";
 
 class App extends Component {
   state = {
     todos: [
       {
-        id: uuid.v4(),
+        id: 1,
         title: "Take out the trash",
         completed: false,
       },
       {
-        id: uuid.v4(),
+        id: 2,
         title: "Dinner with bae",
         completed: false,
       },
       {
-        id: uuid.v4(),
+        id: 3,
         title: "Meeting with boss",
         completed: true,
       },
@@ -37,7 +36,7 @@ class App extends Component {
     });
   };
 
-  // delete todo 
+  // delete todo
   delTodo = (id) => {
     this.setState({
       todos: [...this.state.todos.filter((todo) => todo.id !== id)],
@@ -45,7 +44,7 @@ class App extends Component {
   };
   addTodo = (title) => {
     const newTodo = {
-      id: uuid.v4(),
+      id: 4,
       title,
       completed: false,
     };
