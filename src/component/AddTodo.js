@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import  PropTypes  from 'prop-types';
+import TodoItem from './TodoItem';
 
 export default class AddTodo extends Component {
     state ={
@@ -27,4 +29,9 @@ export default class AddTodo extends Component {
             </form>
         )
     }
+}
+
+// Proptypes
+AddTodo.propTypes = {
+addTodo: PropTypes.func.isRequired,
 }
